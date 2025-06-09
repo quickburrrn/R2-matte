@@ -1,4 +1,5 @@
 from typing import Callable
+from r2matte.følger import finn_eksplisit
 
 def finn_neste_tall(endring: Callable):
     liste = []

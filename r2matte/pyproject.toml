@@ -1,0 +1,7 @@
+[project]
+name = "r2matte"
+version = "0.0.1"
+description = "Verktøy for R2-matte: hjelper deg med å finne løsninger til oppgaver med bruk av AI"
+authors = [{ name="André Hansen", email="Andre.Hansen146@gmail.com"}]
+readme = "README.md"
+requires-python = ">=3.9"
