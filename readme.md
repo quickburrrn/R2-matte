@@ -4,7 +4,7 @@ Eksamensfobreding til R2 matteksamen
 
 ### Inneholder:
 
-``/r2matte`` : Python bibliotek for å hjelpe med å gjøre oppgaver raskere.
+``/r2matte`` : et kraftig Python bibliotek for å hjelpe med å gjøre oppgaver raskere, med ai
 
 ``/Oppgave`` : Programeringsoppgaver fra boka.
 
