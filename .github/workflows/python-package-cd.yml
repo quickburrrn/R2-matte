@@ -25,12 +25,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt 
+        working-directory: ./r2matte
 
       - name: Build wheel
         run: 
           python -m build -o dist
+        working-directory: ./r2matte
 
       - name: Pyblish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           print-hash: true
+          packages-dir: ./r2matte/dist/
