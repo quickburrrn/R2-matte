@@ -20,3 +20,4 @@ Eksamensfobreding til R2 matteksamen
 
 ### Kanskje:
 - [ ] Lokal ai plugin til geogebra
+- [ ] Lokal webapp for å hjelpe
