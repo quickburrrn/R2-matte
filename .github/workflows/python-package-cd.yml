@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - "v*.*.*"
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -30,6 +31,6 @@ jobs:
           python -m build -o dist
 
       - name: Pyblish to PyPI
-        uses: pypa/gh-actions-pypi-publish@release/v1
+        uses: pypa/gh-action-pypi-publish@release/v1
         with:
           print-hash: true
