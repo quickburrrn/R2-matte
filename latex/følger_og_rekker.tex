@@ -1,0 +1,55 @@
+\documentclass[12pt,a4paper]{article}
+
+% --- Pakker ---
+\usepackage[utf8]{inputenc}     % For å støtte ÆØÅ og norsk tastatur
+\usepackage[T1]{fontenc}        % Riktig fontkoding
+\usepackage[norsk]{babel}       % Norsk språk
+\usepackage{amsmath, amssymb}   % For matematiske symboler og ligninger
+\usepackage{lmodern}            % Penere font
+\usepackage{geometry}           % Justering av marger
+\geometry{margin=2.5cm}
+\usepackage{fancyhdr}           % Penere topp- og bunntekst
+\usepackage{setspace}           % Justere linjeavstand
+\usepackage{graphicx}           % Bilder
+\usepackage{hyperref}           % Klikkbare lenker
+
+% --- Header/Footer ---
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Mitt Dokument}
+\fancyhead[R]{\today}
+\fancyfoot[C]{\thepage}
+
+% --- Dokumentstart ---
+\title{Følger og rekker \LaTeX}
+\author{André Hansen}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\onehalfspacing  % 1.5 linjeavstand
+
+\section*{Innledning}
+Dette er dokument for å regne ut enkle ting i første kapitell
+
+\section*{Generelle formeler}
+
+Først
+
+\begin{align}
+\{a_i\}^n_{i=1} = [a_1,a_2,a_3,\ldots,a_n] \\
+\ {a_i}=f(i)=eksplisitt formel
+\end{align}
+
+Så for å finne eksplsitt med linær regersjon kan man:
+
+\begin{align}
+\ {\Delta a_i=k} \\
+\ \hat{y}=ax+b \\
+\ \bar{x}=\frac{1}{N}\sum{}{} \\
+\ a=\frac{\sum(x_i-\bar{x}(y_i-\bar{y}))}{\sum(x_i-\bar{x})^2} \\
+\ b=\bar{y}-a\bar{x}
+\end{align}
+
+\end{document}
