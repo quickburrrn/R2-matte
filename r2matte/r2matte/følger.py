@@ -1,6 +1,14 @@
 from typing import Callable
 
 def finn_eksplisit(tallfølge : list[int]) -> Callable:
+    # Kanskje 
+    # | n_1=a*1+b
+    # || n_2=a*2+b
+    # løser det
+    
+    n_1 = tallfølge[0]
+    n_2 = tallfølge[1]
+
     def eksplisitt_formel(n):
         return 2*n+2
 
