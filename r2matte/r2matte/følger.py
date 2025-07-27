@@ -1,16 +1,26 @@
 from typing import Callable
+from r2matte import mu
 
 def finn_eksplisit(tallfølge : list[int]) -> Callable:
-    # Kanskje 
-    # | n_1=a*1+b
-    # || n_2=a*2+b
-    # løser det
+    """
+    Finner eksplisit, gjør sitte beste å skille på linær, polynom og eksponensiel. Klarer ikke å finne sin, logistisk, tan osv
+
+    Args:
+        tallfølge (list[int]): Tallfølgen som du skal ha formelen til
+
+    Returns:
+        Callable: eksplisitt formel
+    """
+
+    # avragey
+    # avragex
     
-    n_1 = tallfølge[0]
-    n_2 = tallfølge[1]
+    # nedre = 0
+    # for i in tallfølge:
+    #     nedre += i-
 
     def eksplisitt_formel(n):
-        return 2*n+2
+        return (tallfølge[1]-tallfølge[0])*n+tallfølge[0]-(tallfølge[1]-tallfølge[0])
 
     return eksplisitt_formel
 
@@ -19,8 +29,3 @@ def finn_rekursiv() -> str:
 
 if __name__ == "__main__":
     tallfølge = [10, 8, 6, 4]
-
-    formel : Callable = finn_eksplisit(tallfølge)
-
-    for n in range(1, 5):
-        print(formel(n))

@@ -33,7 +33,7 @@
 \section*{Innledning}
 Dette er dokument for å regne ut enkle ting i første kapitell
 
-\section*{Generelle formeler}
+\section*{Finne eksplsitt formel til tallfølge }
 
 Først
 
@@ -47,9 +47,20 @@ Så for å finne eksplsitt med linær regersjon kan man:
 \begin{align}
 \ {\Delta a_i=k} \\
 \ \hat{y}=ax+b \\
-\ \bar{x}=\frac{1}{N}\sum{}{} \\
+\ \bar{x}=\frac{1}{N}\sum_{N}^{i=1} x_i \\
+\ \bar{y}=\frac{1}{N}\sum_{N}^{i=1} y_i \\
 \ a=\frac{\sum(x_i-\bar{x}(y_i-\bar{y}))}{\sum(x_i-\bar{x})^2} \\
 \ b=\bar{y}-a\bar{x}
+\end{align}
+
+Men siden man forventer in linær funksjon er dette overkill. I stedet kan man:
+
+\begin{align}
+\ \Delta a_i=a=a_2-a_1 \\
+\ a_n=\Delta a_i n + b \\
+\ b=a_1-\Delta a_i \\
+\ \text{full formel blir da} \\
+\ a_n=(a_2-a_1)n+a_1-(a_2-a_1)
 \end{align}
 
 \end{document}
