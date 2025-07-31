@@ -23,10 +23,19 @@ Eksamensfobreding til R2 matteksamen
 - [ ] Lokal ai plugin til geogebra
 - [ ] Lokal webapp for å hjelpe
 
-## Rett disse når fagene slippes
+## Oppgaver å komme tilbake til
 
 1.3
-
 1.8
 1.16
 1.19
+1.65
+1.69
+
+## Vanskelige oppgaver (Hvis du kan disse uten hjelp kan du mye)
+
+Dette er oppgaver som jeg har slitt med:
+
+- 1.65
+
+- 1.69
