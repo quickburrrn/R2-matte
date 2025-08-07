@@ -36,6 +36,12 @@ Eksamensfobreding til R2 matteksamen
 
 Dette er oppgaver som jeg har slitt med:
 
-- 1.65
+### Induksjonsbevis:
 
+- 1.65
 - 1.69
+- 1.66
+
+### Oppgaver utenom boka
+
+Finn summen av : $1+\frac{1}{4}+\frac{1}{9}+\frac{1}{16}+...+\frac{1}{n^2}+...$
