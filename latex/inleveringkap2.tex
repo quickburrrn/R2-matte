@@ -12,6 +12,8 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{inconsolata}
+\usepackage{minted}
 \usepackage[colorlinks=true, allcolors=blue]{hyperref}
 
 \title{Innlevering 1: Del 2-5}
@@ -82,10 +84,24 @@ En rekke konvergerer når $k \in [0, 1]$
 
 \subsubsection{Funn summen av rekka}
 
-Her må jeg bruke summen av rekka og sette n mot uendelig
+Summen av en kovergerende geometrisk rekker er $\frac{a_1}{1-k}$
+
+Dermed:
+
+\begin{align*}
+    & \frac{\frac{15}{16}}{1-\frac{8}{10}} \\
+    &= \frac{\frac{15}{16}}{\frac{2}{10}} \\ 
+    &= \frac{15}{16} \div \frac{2}{10} \\
+    &= \frac{15}{16} \cdot \frac{10}{2} \\
+    &= \frac{150}{32}
+    &= \frac{75}{16}
+\end{align*}
+
+Summen er dermed $\frac{75}{16}$
 
 \subsection{Oppgave 3: Bruk fortegnsskjema til å finne konvergeringsområdet til rekka}
 
+Den konverterer i $2$
 
 \subsection{Oppgave 4: Regn ut integralene}
 
@@ -207,8 +223,116 @@ For å finne arealet av det avgrenset området regnes det i tre separate integra
     &= 3 (((\frac{-1}{3}-\frac{1}{2}+2) - (\frac{-27}{3}-\frac{9}{2}+6)) \\
     &+ ((\frac{8}{3}-\frac{4}{2}-4) - (\frac{-1}{3})-\frac{1}{2}+2) \\
     &+ ((\frac{27}{3} - \frac{9}{2} - 6) - (\frac{8}{3}-\frac{4}{2}-4))) \\
+    &= 3 (((\frac{-2}{6}-\frac{3}{6}+\frac{12}{6}) - (\frac{-54}{6}-\frac{27}{6}+\frac{36}{6})) \\
+    &+ ((\frac{16}{6}-\frac{12}{6}-\frac{24}{6}) - (\frac{-2}{6})-\frac{3}{6}+\frac{12}{6}) \\
+    &+ ((\frac{54}{6} - \frac{27}{6} - \frac{36}{6}) - (\frac{16}{6}-\frac{12}{6}-\frac{24}{6}))) \\
+    &= 3 (((\frac{12-2-3}{6}) - (\frac{36-27-54}{6})) \\
+    &+ ((\frac{16-12-24}{6}) - (\frac{12-3-2}{6})) \\
+    &+ ((\frac{54-27-36}{6}) - (\frac{16-12-24}{6}))) \\
+    &= 3 ((\frac{7}{6} - \frac{-45}{6}) + (\frac{-20}{6} - \frac{7}{6}) + (\frac{-9}{6} - \frac{-20}{6})) \\ 
+    &= 3 (\frac{52}{6} + \frac{-27}{6} + \frac{11}{6}) \\
+    &= 3 (\frac{52-27+11}{6}) \\
+    &= 3 (\frac{36}{6}) \\
+    &= 18
 \end{align*}
 
+\section{Med hjelpemidler}
+
+\subsection{Oppgave 7: Bevis ved induksjon at $4+9+14+19+...+(5n-1)=\frac{n}{2}(5n+3)$}
+
+starten på beviser består av å sjekke om $P(1)$ stemmer
+
+$$P(1) : 4 = \frac{1}{2}(5+3) \rightarrow 4 = 4$$
+
+$P(1)$ stemmer
+
+Jeg antar at utsagnet er sant for alle naturlige tall $n = k \in \mathbb{N}$
+
+$4+9+14+19+...+(5k-1)=\frac{k}{2}(5k+3)$
+
+For å bevise dette må utsagnet $n = k + 1$ også være sant:
+
+\begin{align*}
+    4+9+14+19+...+(5k-1)+(5(k+1)-1) &= \frac{k+1}{2}(5(k+1)+3) \\
+    4+9+14+19+...+(5k-1)+(5(k+1)-1) &= \frac{k}{2}(5k+3) + (5(k+1)-1) \\
+    &= \frac{k+1}{2}(5(k+1)+3)
+\end{align*}
+
+$P(n)$ stemmer og er bevist med induksjon
+
+\textbf{Q.E.D}
+
+\subsection{Oppgave 8: Kontrapositivt bevis}
+
+Har ikke lært nokk til å gjøre denne oppgaven :(
+
+\subsection{Oppgave 9: Trekanttallene er tallfølgen gitt ved $T_n = [\frac{1}{2} n(n+1)]^{\infty}_{n=1}$}
+
+\subsubsection{Med utrykket for $T_n$ som utganspunkt, skriv et program som skriver ut summen av de 1, 2, 3, ... ,10 første trekanttallene}
+
+Det kan regnes ut med Python:
+
+\begin{verbatim}
+# definerer t(n)
+t = lambda n: 1/2 * n * (n+1)
+
+# altid et heltall
+def T(n) -> int:
+    s = []
+    for i in range(n+1):
+        s.append(t(i))
+    return sum(s)
+
+# printer summen fra 1 til 10
+for n in range(1, 11):
+    print(f"T({n}) : {T(n)}")
+\end{verbatim}
+
+Resultat av å kjøre koden:
+
+\begin{verbatim}
+T(1) : 1.0
+T(2) : 4.0
+T(3) : 10.0
+T(4) : 20.0
+T(5) : 35.0
+T(6) : 56.0
+T(7) : 84.0
+T(8) : 120.0
+T(9) : 165.0
+T(10) : 220.0
+\end{verbatim}
+
+\subsubsection{Hva er den tiende sentrerte femkanttallet $SF_{10}$}
+
+$SF_{10}$ kan regnes med programmet:
+
+\begin{verbatim}
+    n = 10
+    s = 1
+
+    for i in range(1, n+1):
+        s += 5*i -5
+
+    print(s)
+\end{verbatim}
+
+$SF_{10} = 226$
+
+\subsubsection{Hva er den eksplisitte formelen for $SF_n$}
+
+$SF_n$ kan defineres som lukket form:  $1 + \sum_{i=1}^{n} 5(i)-5$
+
+Dermed kan notasjonen konverteres til et eksplisitt uttrykk
+
+\begin{align*}
+    SF_n &= 1 +\sum_{i=1}^{n} 5(i)-5 \\ 
+    &=  1 +5 \sum_{i=1}^{n} i-1 \\ 
+    &=  1 +5 ( \sum_{i=1}^{n} i - \sum_{i=1}^{n} 1 ) \\
+    &=  1 +5 ( \frac{n(n+1)}{2} - {n} ) \\
+    &=  1 +5 ( \frac{n^2-n}{2} ) \\
+    &=  1 +\frac{5}{2} n^2-n
+\end{align*}
 
 \subsection{Direkte}
 
