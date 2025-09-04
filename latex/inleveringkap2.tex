@@ -334,233 +334,70 @@ Dermed kan notasjonen konverteres til et eksplisitt uttrykk
     &=  1 +\frac{5}{2} n^2-n
 \end{align*}
 
-\subsection{Direkte}
+\subsection{Oppgave 10: For å komme i form til å løpe mila under arrangementet Midnight Sun Marathon, ønsker Atle å løpe stadig lengre distanser. Han tenker å løpe 2,6 km første gang, og derreter øke distansen med 0,2 km hver gang. Han setter som mål å ha løpt til sammen 260km før arrangementet}
 
-\subsubsection{Bevis at $n^3+n, n \in \mathbb{N}$ er et partall direkte}
+\subsubsection{Bruk en aritmetisk rekke til å finne ut hvor mange ganger Atle må løpe for å nå målet}
 
+Den totale distansen Atle har løpt kan skrives som : $\sum^n_{i=1} 2.6+(0.2(i-1))$
 
-vi vil vise at $n^3+n$ er et partall, det vil si at det fins $m \in \mathbb{N}$ slik at $n^3+n=2m$
-Jeg skal bevise det for når $n$ er et partall og oddetall
+For å finne hvor mange ganger Atle må løpe for å nå målet kan ligningen: $\sum^n_{i=1} 2.6+(0.2(i-1))=260$ løses med CAS
 
-Først antar vi at $n$ er et partall
+$\sum^n_{i=1} 2.6+(0.2(i-1))=260 \rightarrow n = 40$
 
-da fins $k \in \mathbb{N}$ slik at $n=2k$. Vi får da at $n^3+n=(2k)^3+2k=2^3 \cdot k^3+2k=8k^3+2k=2(4k^3+k)$.
+Han må løpe 40 ganger for å nå målet
 
-Siden $k \in \mathbb{N}$ er $2(4k^3+k) \in \mathbb{N}$
+\subsubsection{Argumenter for at hvis Atle når målet, er han i stand til å løpe mila under Midnight Sun Marathon}
 
-Dermed fins $m \in \mathbb{N}$ nemelig $m=4k^3+k$ slik at $n^3+n=2m$
+På Atle sin 40'ende og siste løpetur løper han 10,4km som er mer en det han skal løpe under Midnight Sun Marathon
 
-Så antar vi at $n$ er et oddetall
+\subsection{Opgpave 11: Det viser seg at t år etter planting vokser en bestemt type eukalyptustre med en hastighet gitt ved $f(t)=0.2+\frac{2}{(t+2)^2}$}
 
-da fins $k \in \mathbb{N}$ slik at $n=2k+1$. Vi får da at $n^3+n=(2k+1)^3+2k+1=(4k^2+4k+1)(2k+1)+2k+1=8k^3+8k^2+2k+4k^2+4k+1+2k+1=8k^3+12k^2+8k+2=2(4k^3+6k^2+4k+1)$
+\subsubsection{Hvor mye vokser et eukalyptustre i løpet av det andre året etter det ble plantet?}
 
-samme som i sta finnes $m \in \mathbb{N}$ er også, nemelig $m=4k^3+6k^2+4k+2$ slik at $n^3+n=2m$ også når $n$ er et oddetall
+Formelen for hastighet er gitt ved :  $f(t)=0.2+\frac{2}{(t+2)^3}$
 
-Så da har vi besvist at $n^3+n$ er et partall for alle heltall i n.
+Dermed kan lengden planetn har vokst regnes ut med : $\int_{1}^{2}f(t)$ i CAS
 
-\paragraph{riktig men}
+$\int_{1}^{2}0.2+\frac{2}{(t+2)^3}=0.249$
 
-Til neste bevis med flere steg bruk paragraph for hver seksjon, også ta utregning i \ [ ] \
+\subsubsection{Hvor lang tid tar det fra et eukalyptustre blir plantet til det har vokst 2,25m}
 
-\subsubsection{Bevis at $a,b,c \in \mathbb{Z}$ hvis a går opp i b, og b går opp i c, så vil a gå opp i c }
-
-vi antar at $\frac{a}{b} \in \mathbb{Z}$ og $\frac{b}{c} \in \mathbb{Z}$
-
-derfor fins $k, u \in \mathbb{Z}$ slik at $\frac{a}{b}=k$ og $\frac{b}{c}=u$
-
-vi får da at:
+Legnden til treet kan defineres ved $\int f(t)$
 
 \begin{align*}
-    \frac{a}{b} &= k \rightarrow a = kb \\
-    \frac{b}{c} &= u \rightarrow b = uc \\
-    \frac{a}{c} &= \frac{kb}{c} = \frac{kuc}{c}=ku \\
-    \frac{a}{c}=ku \in \mathbb{Z}
+    F(t) &= \int f(t) \\
+    &= \int 0.2+\frac{2}{(t+2)^3}
+    &= \frac{1}{5}t - \frac{2}{2(t+2)^2}
 \end{align*}
 
-siden $k,u \in \mathbb{Z}$ og $\frac{a}{c}=ku$ har vi bevist at $\frac{a}{c} \in \mathbb{Z}$
-
-\paragraph{Nesten}
-
-dette fungerer men er litt feil. a går opp i b betyr egentlig $b \mid a$
-og jeg skulle ha brukt $b \mid a$ i stedet for $\frac{b}{a}$
-legg også til \textbf{Q.E.D} på slutten for at beviset skal bli mer proft
-
-\subsubsection{Bevis at $n \in \mathbb{Z}, n \geq 5$, så kan ikke alle tallene $n, n+2, n+4$ være primtall}
-
-Vi lar $\mathbb{P}$ betegne mengden av alle primtall
-
-\paragraph{Tilfelle 1: $n$ er et partall}
-
-Det finnes $k \in \mathbb{Z}$ slik at $n=2k$
-
-Det gir oss $\frac{2k}{2} \in \mathbb{Z}$ og dermed $n \notin \mathbb{P}$
-
-\paragraph{Tilfelle 2: $n$ er et odetall}
-
-Det finnes $k \in \mathbb{Z}$ slik at $n=2k+1$
-
-\subsection{Induksjon}
-
-\subsubsection{Bevis at $2+4+6+...+2n=n(n+1)$}
-
-$P(1): 2=1(1+1) \rightarrow 2=2$ P(1) stemmer 
-
-Jeg antar at utsagnet er sant for alle naturlige tall $n=k \in \mathbb{N}$
-
-$2+4+6+...+2k=k(k+1)$
-
-Jeg vil vise at utsagnet $n = k + 1$ er sant:
+For å finne tiden må vi løse : 
 
 \begin{align*}
-    2+4+6+...+2k+2(k+1) &= (k+1)((k+1) + 1) \\
-    2+4+6+...+2k+2(k+1) &= k(k+1)+2(k+1) \\
-    &= k^2+3k+2 \\
-    &= (k+1)(k+2)
+    \frac{1}{5}t - \frac{2}{2(t+2)^2} &= 2.25 \rightarrow t = 11.3
 \end{align*}
 
-P(N) stemmer
+Det vil ta 11.3 år før treet er 2.25 meter høyt
 
-Dermed har jeg bevist ved induksjon at utsagnet er sant for alle naturlige tall $n$
+\subsection{Oppgave 12: Funksjonen $f$ er gitt ved $f(x)=\sqrt{m-x}$, der $m$ er et positivt, reelt tall. Origo danner med skjæringspunktene mellom $f$ og koordinataksene en rettvinklet trekant}
 
-\textbf{Q.E.D}
+\subsubsection{Vis at hypotenusen i trekanten ligger på linja $y=-\frac{1}{\sqrt{m}}x + \sqrt{m}$}
 
-\textbf{Riktig}
-Funker kan legge til:
-\[
-\sum_{i=1}^{n} 2i = n(n + 1)
-\]
-For at det skal bli penere
+Hypotenusen kan skrives som en vektor fra $(0, \sqrt{m})$ til $(m, 0)$
 
-\subsubsection{Bevis $a_n=\frac{3}{2} \cdot 2^n -1$ er en eksplisitt formel for $a_1=2$ og $a_{n+1}=2a_n+1$ for $n \ge 1$}
+$\vec{h} = (m, -sqrt{m})$
 
-Jeg sjekker $n=1$
-
-$a_1=\frac{3}{2} \cdot 2 - 1 = 2$
-
-P(1) stemmer
-
-Jeg antar at formelen gjelder for et naturlig tall $k$, det vil si  $a_k=\frac{3}{2} \cdot 2^k - 1$
-
-Jeg skal vise at vi da har $a_{k+1} = \frac{3}{2} \cdot 2^{k+1} - 1$
+Dermed kan vi skrive om funksjonen til en linje
 
 \begin{align*}
-    a_{k+1} &= 2a_k+1 \\
-    &= 2(\frac{3}{2} \cdot 2^{k} - 1) + 1 \\
-    &= 3 \cdot 2^k - 2 + 1 \\
-    &= \frac{3}{2} \cdot 2^{k+1} - 1
+    y=\frac{-\sqrt{m}}{m}x + \frac{m}
+    y=\frac-{1}{\sqrt{m}}x + \sqrt{m}
 \end{align*}
 
-Dermed har jeg bevist at formlen gjelder for alle naturlige tall
+\subsubsection{Bruk CAS til å vise at forholdet mellom $V$ og $v$ er uavhengig av $m$}
 
-\textbf{Q.E.D}
-
-\textbf{Riktig}
-
-\subsubsection{Bevis at $P(n): (x^n)'= nx^{n-1}$ for alle $n \in \mathbb{N}$}
-
-Jeg sjekker $n=1$
-
-$(x^1)'= 1x^{1-1} \rightarrow x'=1$
-
-Vi vet at $x'$ har et stigningstall på $1$, det vil si $x'= 1$
-
-$P(1)$ stemmer
-
-Jeg antar at utsagnet gjelder for alle naturle tall $k \in \mathbb{N}$, Det vil si $(x^k)' = kx^{k-1}$
-
-Jeg vil vise at $P(k+1)$ er sant:
-
-$$(x^{k+1})' = (k+1)x^{(k+1)-1} = x^k(k+1)$$
-
-Jeg bruker definisjonen til den deriverte
-
-\begin{align*}
-    (x^{k+1})'=\lim_{\Delta x \rightarrow 0}\frac{(\Delta x + x)^{k+1}-x^{k+1}}{\Delta x}
-\end{align*}
-
-For å løse denne oppgaven må jeg bruke binomisk formel, den sier at:
-
-$$(a+b)^n=\sum_{i=0}^{n}\binom{n}{i}a^{n-i}b^i$$
-\begin{align*}
-    (x^{k+1})' &= \lim_{\Delta x \rightarrow 0} \frac{(\Delta x + x)^{k+1} - x^{k+1}}{\Delta x} \\
-    (\Delta x + x)^{k+1} &= \sum_{i=0}^{k+1}\binom{k+1}{i}x^{k+1-i}\Delta^i \\
-    (\Delta x + x)^{k+1} &= \binom{k+1}{1}x^{k+1-1}\Delta x^1+\binom{k+1}{2}x^{k-1}\Delta x^2+...+\binom{k+1}{k+1}x^{(k+1)-(k+1)} \Delta x ^{k+1} \\
-    (\Delta x + x)^{k+1} &= x^{k+1}+\binom{k+1}{1}x^k\Delta x + \binom{k+1}{2}x^{k-1}{\Delta x} ^2+...+{\Delta x}^{k+1} \\
-    (x^{k+1})' &= \lim_{\Delta x \rightarrow 0} \frac{[x^{k+1}+\binom{k+1}{1}x^k\Delta x + \binom{k+1}{2}x^{k-1}{\Delta x} ^2+...+{\Delta x}^{k+1}] - x^{k+1}}{\Delta x} \\
-    &= \lim_{\Delta x \rightarrow 0} \frac{\binom{k+1}{1}x^k\Delta x + \binom{k+1}{2}x^{k-1}{\Delta x} ^2+...+{\Delta x}^{k+1}}{\Delta x} \\
-    &= \lim_{\Delta x \rightarrow 0} \binom{k+1}{1}x^k + \binom{k+1}{2} x^{k-1} \Delta x + ... + {\Delta x}^k \\
-    &= \binom{k+1}{1}x^k+\binom{k+1}{2}x^{k-1}0+...+0^k \\
-    &= \binom{k+1}{1}x^k \\
-    &= (k+1)x^k \\
-\end{align*}
-
-Dermed har jeg bevist at $(x^{k+1})=(k+1)x^k$ som var det jeg vile bevise. Dette viser at utsagnet gjelder for alle natulrige tall $n \in \mathbb{N}$
-
-\textbf{Q.E.D}
-
-\textbf{Riktig}
-
-Brukte chat gpt da, men bare til binomisk formel. Kunne også ha blitt løst med potensregelen.
-
-\newpage
-
-\subsubsection{Bevis at $n^5-n$ er delelig med $5$ for $n \in \mathbb{N}$}
-
-$P(1): 1^5-1=0$
-
-$P(1)$ stemmer fordi $\frac{0}{5}\in \mathbb{Z}$
-
-Jeg antar at utsagnet er sant for $k \in \mathbb{N}$ og er delig med 5. Det vil si at det fines $s \in \mathbb{Z}$ slik at $k^5-k=5s$
-
-Jeg vil vise at $P(n+1)$ er sant, det vil si at det finnes tall $r \in \mathbb{Z}$ slik at $(k+1)^5-(k+1)=5r$
-
-\begin{align*}
-    (k+1)^5-(k+1) &= 1k^5+5k^4+10k^3+10k^2+5k^1+1-k-1 \\
-    &= \textcolor{red}{k^5-k}+5k^4+10k^3+10k^2+5k \\
-    &= \textcolor{red}{5r}+5k^4+10k^3+10k^2+5k \qquad \textbf{Her bruker vi antagelsen}\\
-    &= 5(s+k^4+2k^3+2k^2+k) \\
-    &= 5(r)
-\end{align*}
-
-I den siste likheten har jeg kalt $s+k^4+2k^3+2k^2+k$ for $r$
-
-Jeg har dermed bevist med induksjon at $\frac{n^5-n}{5} \in \mathbb{Z}$ for $n \in \mathbb{N}$
-
-\textbf{Riktig}
-Men kan kanskje bruke mer ord i sluttsetningen
-
-\subsubsection{Lag en tabel som viser hvilke naturlige tall ser ut til at $2^n > 2n$ så bevis resultatet ved induksjon}
-
-\begin{tabular}{|c|c|c|c|}
-    \hline
-    $n$ & $2^n$ & $2n$ & $2^n > 2n$ \\
-    \hline
-    1 & 2 & 2 & usant \\
-    2 & 4 & 4 & usant \\
-    3 & 8 & 6 & sant \\
-    4 & 16 & 8 & sant \\
-    5 & 32 & 10 & sant \\
-    6 & 64 & 12 & sant \\
-    \hline
-\end{tabular}
-
-Jeg ønske å bevise at $2^n > 2n$ for $n \ge 3$
-
-Utsagnet er sant for $n=3$. Jeg antar at utsagnet er sant for et naturlig tall $k \ge 3$, altså at $\textcolor{red}{2^k > 2k}$
-
-Jeg må vise at da er også $2^{k+1} > (2(k+1))$
-
-\begin{align*}
-2^{k+1} &= 2 \cdot \textcolor{red}{2^k} \\
-&> 2 \cdot \textcolor{red}{2k} \qquad \textbf{Her bruker vi antagelsen} \\
-&= 2(k+1)
-\end{align*}
-
-Jeg har dermed bevist ved induksjon at $2^n > 2n$ er sant for alle naturlige tall $n \ge 3$
-
-\textbf{Riktig}
-
-\bibliographystyle{alpha}
-\bibliography{sample}
-
-\end{document}
+\begin{figure}[h] % [h] betyr "here" = plasser her
+    \centering
+    \includegraphics[width=0.7\textwidth]{oppgave12.png}
+    \caption{Mitt screenshot fra GeoGebra}
+    \label{fig:geogebra}
+\end{figure}
