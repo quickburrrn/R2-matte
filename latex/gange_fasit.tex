@@ -1,0 +1,120 @@
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=1.5cm,landscape]{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{amsmath,amssymb}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\pagenumbering{gobble}
+
+\begin{document}
+\begin{center}
+  {\LARGE \textbf{Hoderegningsark – R2}}\\[2mm]
+  {\large Gangetabell, kvadrattall og kvadratrøtter}
+\end{center}
+\vspace{4mm}
+
+% =========================
+% 1) Gangetabell 1–12
+% =========================
+\section*{Gangetabell $1\times 1$ til $12\times 12$}
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.15}
+\small
+\begin{center}
+\begin{tabular}{c|*{12}{r}}
+ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 \\
+\hline
+1  & 1  & 2  & 3  & 4  & 5  & 6  & 7  & 8  & 9  & 10  & 11  & 12  \\
+2  & 2  & 4  & 6  & 8  & 10 & 12 & 14 & 16 & 18 & 20  & 22  & 24  \\
+3  & 3  & 6  & 9  & 12 & 15 & 18 & 21 & 24 & 27 & 30  & 33  & 36  \\
+4  & 4  & 8  & 12 & 16 & 20 & 24 & 28 & 32 & 36 & 40  & 44  & 48  \\
+5  & 5  & 10 & 15 & 20 & 25 & 30 & 35 & 40 & 45 & 50  & 55  & 60  \\
+6  & 6  & 12 & 18 & 24 & 30 & 36 & 42 & 48 & 54 & 60  & 66  & 72  \\
+7  & 7  & 14 & 21 & 28 & 35 & 42 & 49 & 56 & 63 & 70  & 77  & 84  \\
+8  & 8  & 16 & 24 & 32 & 40 & 48 & 56 & 64 & 72 & 80  & 88  & 96  \\
+9  & 9  & 18 & 27 & 36 & 45 & 54 & 63 & 72 & 81 & 90  & 99  & 108 \\
+10 & 10 & 20 & 30 & 40 & 50 & 60 & 70 & 80 & 90 & 100 & 110 & 120 \\
+11 & 11 & 22 & 33 & 44 & 55 & 66 & 77 & 88 & 99 & 110 & 121 & 132 \\
+12 & 12 & 24 & 36 & 48 & 60 & 72 & 84 & 96 & 108& 120 & 132 & 144 \\
+\end{tabular}
+\end{center}
+
+\vspace{3mm}
+\noindent\textit{Tips:} 9-gangen har tverrsum 9 (f.eks. $9\cdot7=63$), tall ganger 5 ender på 0 eller 5, og \(a\cdot b=b\cdot a\) (symmetri i tabellen).
+
+% =========================
+% 2) Kvadrattall
+% =========================
+\section*{Kvadrattall}
+\begin{multicols}{3}
+\small
+\begin{tabular}{@{}lr@{}}
+$1^2$  &= 1   \\
+$2^2$  &= 4   \\
+$3^2$  &= 9   \\
+$4^2$  &= 16  \\
+$5^2$  &= 25  \\
+$6^2$  &= 36  \\
+$7^2$  &= 49  \\
+$8^2$  &= 64  \\
+$9^2$  &= 81  \\
+$10^2$ &= 100 \\
+\end{tabular}
+
+\columnbreak
+\begin{tabular}{@{}lr@{}}
+$11^2$ &= 121 \\
+$12^2$ &= 144 \\
+$13^2$ &= 169 \\
+$14^2$ &= 196 \\
+$15^2$ &= 225 \\
+$16^2$ &= 256 \\
+$17^2$ &= 289 \\
+$18^2$ &= 324 \\
+$19^2$ &= 361 \\
+$20^2$ &= 400 \\
+\end{tabular}
+
+\columnbreak
+\begin{tabular}{@{}lr@{}}
+$21^2$ &= 441 \\
+$22^2$ &= 484 \\
+$23^2$ &= 529 \\
+$24^2$ &= 576 \\
+$25^2$ &= 625 \\
+$26^2$ &= 676 \\
+$27^2$ &= 729 \\
+$28^2$ &= 784 \\
+$29^2$ &= 841 \\
+$30^2$ &= 900 \\
+\end{tabular}
+\end{multicols}
+
+% =========================
+% 3) Vanlige kvadratr\o tter
+% =========================
+\section*{Vanlige kvadratr\o tter (eksakte og tiln\ae rminger)}
+\small
+\begin{center}
+\begin{tabular}{lrr@{\quad}lrr}
+\toprule
+\textbf{Rot} & \textbf{Eksakt} & \textbf{Ca.} & \textbf{Rot} & \textbf{Eksakt} & \textbf{Ca.} \\
+\midrule
+$\sqrt{2}$  & $\sqrt{2}$  & 1.414 & $\sqrt{8}$  & $2\sqrt{2}$ & 2.828 \\
+$\sqrt{3}$  & $\sqrt{3}$  & 1.732 & $\sqrt{10}$ & $\sqrt{10}$ & 3.162 \\
+$\sqrt{5}$  & $\sqrt{5}$  & 2.236 & $\sqrt{12}$ & $2\sqrt{3}$ & 3.464 \\
+$\sqrt{6}$  & $\sqrt{6}$  & 2.449 & $\sqrt{15}$ & $\sqrt{15}$ & 3.873 \\
+$\sqrt{7}$  & $\sqrt{7}$  & 2.646 & $\sqrt{16}$ & $4$          & 4.000 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\vspace{2mm}
+\noindent\textit{Husk forenkling:} $\sqrt{ab}=\sqrt{a}\,\sqrt{b}$ for $a,b\ge0$ (f.eks. $\sqrt{12}=\sqrt{4\cdot3}=2\sqrt{3}$). Og $\,(a\pm b)^2=a^2\pm2ab+b^2\,.$
+
+\vspace{2mm}
+\noindent\textbf{Ekstra mentaltriks:} $(n\pm1)^2=n^2\pm2n+1$ (lett å gå fra $n^2$ til neste kvadrat), og $\sqrt{n^2\cdot m}=n\sqrt{m}$.
+
+\end{document}

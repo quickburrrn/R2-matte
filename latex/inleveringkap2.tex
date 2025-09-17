@@ -84,7 +84,7 @@ En rekke konvergerer når $k \in [0, 1]$
 
 \subsubsection{Funn summen av rekka}
 
-Summen av en kovergerende geometrisk rekker er $\frac{a_1}{1-k}$
+Summen for en kovergerende geometrisk rekker er $\frac{a_1}{1-k}$
 
 Dermed:
 
@@ -93,15 +93,35 @@ Dermed:
     &= \frac{\frac{15}{16}}{\frac{2}{10}} \\ 
     &= \frac{15}{16} \div \frac{2}{10} \\
     &= \frac{15}{16} \cdot \frac{10}{2} \\
-    &= \frac{150}{32}
+    &= \frac{150}{32} \\
     &= \frac{75}{16}
 \end{align*}
 
-Summen er dermed $\frac{75}{16}$
+Summen er dermed: $\frac{75}{16}$
 
-\subsection{Oppgave 3: Bruk fortegnsskjema til å finne konvergeringsområdet til rekka}
+\subsection{Oppgave 3: Bruk fortegnsskjema til å finne konvergeringsområdet til rekka: $1+\frac{3+x}{2x}+(\frac{3+x}{2x})^2+(\frac{3+x}{2x})^3+...$}
 
-Den konverterer i $2$
+
+Dette kan defineres som en gemoetisk rekke med k:
+\[
+k = \frac{3+x}{2x}
+\]
+
+Dermed har vi ulikheten
+\[
+\left|\frac{3+x}{2x}\right| < 1 \;\Longleftrightarrow\; (x+3)^2 < (2x)^2 \\
+x^2+6x+9 < 4x^2 \;\Longleftrightarrow\; 0 < 3x^2 - 6x - 9 \;\Longleftrightarrow\; 0 < (x-3)(x+1)
+\]
+
+Dermed kan et fortegnsskjema for $(x-3)(x+1)$ lages
+\[
+x \in (-\infty,-1)\cup(3,\infty), \quad x\neq 0.
+\]
+
+konvergeringsområdet blir da:
+\[
+(-\infty,-1)\cup(3,\infty).
+\]
 
 \subsection{Oppgave 4: Regn ut integralene}
 
@@ -150,7 +170,7 @@ Denne løsningen bruker delvis integrasjon
     &= \frac{1}{2} e^{2x} ((x^2+3x+1) - \frac{2x+2}{2}) \\
     &= \frac{1}{2} e^{2x} ((x^2+3x+1) - (x-1)) \\
     &= \frac{1}{2} e^{2x} ((x^2+2x+2)) \\ 
-    &= e^{2x} (\frac{1}{2} x^2 + x + 1) + C
+    &= e^{2x} (\frac{1}{2} x^2 + x) + C
 \end{align*}
 
 \subsubsection{$\int \frac{3x-37}{x^2-3x-4}$}
@@ -195,14 +215,18 @@ Nå som $A$ og $B$ er definert kan vi regne ut integralene
 
 \subsection{Oppgave 5: La $f(x)=5x^2+3, D_f=[-1, 2]$ Hva er volumet av omdreiningslegemet som framkommer ved å dreie grafen til $f 360^\circ$ om x-aksen?}
 
-For å finne omdreiningslegemet må integralet $\int_{-1}^{2} 5x^2+3$ løses
+For å finne omdreiningslegemet må integralet $\pi \int_{-1}^{2} (5x^2+3)^2$ løses
 
 \begin{align*}
-    V &= \int_{-1}^{2} 5x^2+3 \\
-    &= [\frac{5}{3}x^3+3x]^{2}_{-1} \\
-    &= \frac{5}{3}2^3+6-(\frac{5}{3}*(-1)^3-3) \\
-    &= \frac{5}{3}8 + 6 + \frac{5}{3} + 3 \\
-    &= 26
+    V &= \pi \int_{-1}^{2} (5x^2+3)^2 \\
+    &= \pi \int_{-1}^{2} 25x^4 + 30x^2 + 9 \\
+    &= \pi [\frac{25}{5} x^5 + \frac{30}{3} x^3 + 9x]^2_{-1} \\
+    &= \pi [5x^5 + 10 x^3 + 9x]^2_{-1} \\
+    &= \pi ((5 * 2^5 + 10*2^3 + 9*2) - (5(-1)^2 + 10(-1)^3 + 9(-1))) \\
+    &= \pi ((160 + 80 + 18) - (-5-10-9)) \\
+    &= \pi (258 + 25) \\ 
+    &= \pi (258 + 25) \\
+    &= \pi 283
 \end{align*}
 
 \subsection{Oppgave 6: Regn ut itegral}
@@ -321,7 +345,7 @@ $SF_{10} = 226$
 
 \subsubsection{Hva er den eksplisitte formelen for $SF_n$}
 
-$SF_n$ kan defineres som lukket form:  $1 + \sum_{i=1}^{n} 5(i)-5$
+$SF_n$ kan defineres på lukket form:  $1 + \sum_{i=1}^{n} 5(i)-5$
 
 Dermed kan notasjonen konverteres til et eksplisitt uttrykk
 
@@ -331,7 +355,7 @@ Dermed kan notasjonen konverteres til et eksplisitt uttrykk
     &=  1 +5 ( \sum_{i=1}^{n} i - \sum_{i=1}^{n} 1 ) \\
     &=  1 +5 ( \frac{n(n+1)}{2} - {n} ) \\
     &=  1 +5 ( \frac{n^2-n}{2} ) \\
-    &=  1 +\frac{5}{2} n^2-n
+    &=  1 +\frac{5}{2} n^2- \frac{5}{2}n
 \end{align*}
 
 \subsection{Oppgave 10: For å komme i form til å løpe mila under arrangementet Midnight Sun Marathon, ønsker Atle å løpe stadig lengre distanser. Han tenker å løpe 2,6 km første gang, og derreter øke distansen med 0,2 km hver gang. Han setter som mål å ha løpt til sammen 260km før arrangementet}
@@ -366,17 +390,17 @@ Legnden til treet kan defineres ved $\int f(t)$
 
 \begin{align*}
     F(t) &= \int f(t) \\
-    &= \int 0.2+\frac{2}{(t+2)^3}
+    &= \int 0.2+\frac{2}{(t+2)^3} \\
     &= \frac{1}{5}t - \frac{2}{2(t+2)^2}
 \end{align*}
 
-For å finne tiden må vi løse : 
+For å finne tiden må vi løse, med å legge på $\frac{1}{4}$ : 
 
 \begin{align*}
-    \frac{1}{5}t - \frac{2}{2(t+2)^2} &= 2.25 \rightarrow t = 11.3
+    \frac{1}{5}t - \frac{2}{2(t+2)^2} + \frac{1}{4} &= 2.25 \rightarrow t = 10.04
 \end{align*}
 
-Det vil ta 11.3 år før treet er 2.25 meter høyt
+Det vil ta 10.04 år før treet er 2.25 meter høyt
 
 \subsection{Oppgave 12: Funksjonen $f$ er gitt ved $f(x)=\sqrt{m-x}$, der $m$ er et positivt, reelt tall. Origo danner med skjæringspunktene mellom $f$ og koordinataksene en rettvinklet trekant}
 
@@ -389,15 +413,20 @@ $\vec{h} = (m, -sqrt{m})$
 Dermed kan vi skrive om funksjonen til en linje
 
 \begin{align*}
-    y=\frac{-\sqrt{m}}{m}x + \frac{m}
-    y=\frac-{1}{\sqrt{m}}x + \sqrt{m}
+    y &= \frac{-\sqrt{m}}{m}x + \sqrt{m} \\
+    y &= -\frac{1}{\sqrt{m}}x + \sqrt{m}
 \end{align*}
 
 \subsubsection{Bruk CAS til å vise at forholdet mellom $V$ og $v$ er uavhengig av $m$}
 
-\begin{figure}[h] % [h] betyr "here" = plasser her
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.7\textwidth]{oppgave12.png}
-    \caption{Mitt screenshot fra GeoGebra}
+    \caption{Bevist}
     \label{fig:geogebra}
 \end{figure}
+
+\bibliographystyle{alpha}
+\bibliography{sample}
+
+\end{document}
