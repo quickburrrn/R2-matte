@@ -156,218 +156,126 @@ $$ x = \frac{\pi}{8} + \frac{\pi \cdot k}{2}, \; k \in (-2, -1, 1) $$
     x = \frac{\pi}{2}
 \end{align*}
 
-\subsection{Oppgave 5: La $f(x)=5x^2+3, D_f=[-1, 2]$ Hva er volumet av omdreiningslegemet som framkommer ved å dreie grafen til $f 360^\circ$ om x-aksen?}
+\subsection{Oppgave 5: Gitt funksjonen $f(x)=2sin(\frac{x}{2}+\frac{\pi}{4})-1, \; x \in [-4\pi, 4\pi)$}
 
-For å finne omdreiningslegemet må integralet $\pi \int_{-1}^{2} (5x^2+3)^2$ løses
-
-\begin{align*}
-    V &= \pi \int_{-1}^{2} (5x^2+3)^2 \\
-    &= \pi \int_{-1}^{2} 25x^4 + 30x^2 + 9 \\
-    &= \pi [\frac{25}{5} x^5 + \frac{30}{3} x^3 + 9x]^2_{-1} \\
-    &= \pi [5x^5 + 10 x^3 + 9x]^2_{-1} \\
-    &= \pi ((5 * 2^5 + 10*2^3 + 9*2) - (5(-1)^2 + 10(-1)^3 + 9(-1))) \\
-    &= \pi ((160 + 80 + 18) - (-5-10-9)) \\
-    &= \pi (258 + 25) \\ 
-    &= \pi (258 + 25) \\
-    &= \pi 283
-\end{align*}
-
-\subsection{Oppgave 6: Regn ut itegral}
-
-funksjonen er 3(x+1)(x-2) fordi den krysser -1 og 2 i x aksen.
-
-For å finne arealet av det avgrenset området regnes det i tre separate integraler:
+\subsubsection{hva er nullpunktene til $f(x)$}
 
 \begin{align*}
-    &= \int_{-3}^{-1}3(x+1)(x-2)dx  + \int_{-1}^{2}3(x+1)(x-2)dx + \int_{2}^{3}3(x+1)(x-2)dx \\
-    &= 3 (\int_{-3}^{-1}(x+1)(x-2)dx  + \int_{-1}^{2}(x+1)(x-2)dx + \int_{2}^{3}(x+1)(x-2)dx) \\
-    &= 3 (\int_{-3}^{-1}(x^2-x-2) dx  + \int_{-1}^{2}(x^2-x-2) dx + \int_{2}^{3}(x^2-x-2) dx) \\
-    &= 3 (\int_{-3}^{-1}(x^2-x-2) dx  + \int_{-1}^{2}(x^2-x-2) dx + \int_{2}^{3}(x^2-x-2) dx) \\
-    &= 3 ([\frac{1}{3}x^3 - \frac{1}{2} x^2 - 2x]^{-1}_{-3} + [\frac{1}{3}x^3 - \frac{1}{2} x^2 - 2x]^2_{-1} + [\frac{1}{3}x^3 - \frac{1}{2} x^2 - 2x]^3_2) \\
-    &= 3 (((\frac{1}{3}(-1)^3 - \frac{1}{2} (-1)^2 - 2(-1)) - (\frac{1}{3}(-3)^3 - \frac{1}{2} (-3)^2 - 2(-3))) \\
-    &+ ((\frac{1}{3}(2)^3 - \frac{1}{2} (2)^2 - 2(2)) - (\frac{1}{3}(-1)^3 - \frac{1}{2} (-1)^2 - 2(-1))) \\
-    &+ ((\frac{1}{3}(3)^3 - \frac{1}{2} (3)^2 - 2(3)) - (\frac{1}{3}(2)^3) - \frac{1}{2} (2)^2 - 2(2))) \\
-    &= 3 (((\frac{-1}{3}-\frac{1}{2}+2) - (\frac{-27}{3}-\frac{9}{2}+6)) \\
-    &+ ((\frac{8}{3}-\frac{4}{2}-4) - (\frac{-1}{3})-\frac{1}{2}+2) \\
-    &+ ((\frac{27}{3} - \frac{9}{2} - 6) - (\frac{8}{3}-\frac{4}{2}-4))) \\
-    &= 3 (((\frac{-2}{6}-\frac{3}{6}+\frac{12}{6}) - (\frac{-54}{6}-\frac{27}{6}+\frac{36}{6})) \\
-    &+ ((\frac{16}{6}-\frac{12}{6}-\frac{24}{6}) - (\frac{-2}{6})-\frac{3}{6}+\frac{12}{6}) \\
-    &+ ((\frac{54}{6} - \frac{27}{6} - \frac{36}{6}) - (\frac{16}{6}-\frac{12}{6}-\frac{24}{6}))) \\
-    &= 3 (((\frac{12-2-3}{6}) - (\frac{36-27-54}{6})) \\
-    &+ ((\frac{16-12-24}{6}) - (\frac{12-3-2}{6})) \\
-    &+ ((\frac{54-27-36}{6}) - (\frac{16-12-24}{6}))) \\
-    &= 3 ((\frac{7}{6} - \frac{-45}{6}) + (\frac{-20}{6} - \frac{7}{6}) + (\frac{-9}{6} - \frac{-20}{6})) \\ 
-    &= 3 (\frac{52}{6} + \frac{-27}{6} + \frac{11}{6}) \\
-    &= 3 (\frac{52-27+11}{6}) \\
-    &= 3 (\frac{36}{6}) \\
-    &= 18
+    f(x) &= 0 \\
+    2\sin(\frac{x}{2}+\frac{\pi}{4})-1, \; x \in [-4\pi, 4\pi) &= 0 \\
+    2\sin(\frac{x}{2}+\frac{\pi}{4}) &= 1 \\
+    \sin(\frac{x}{2}+\frac{\pi}{4}) &= \frac{1}{2} \\
+    \frac{x}{2} + \frac{\pi}{4} = \frac{\pi}{6} + 2\pi \cdot k  &\;\lor\; \frac{x}{2} + \frac{\pi}{2} = \frac{\pi}{6} \cdot 2\pi \cdot k, \; k\in\mathbb{Z} \\
+    x+\pi=\frac{\pi}{3} + 4\pi \cdot k &\;\lor\; x + \pi = \frac{\pi}{3} + 4\pi \cdot k \\
+    x=-\frac{2\pi}{3} \cdot 4\pi \cdot k &\; \lor \; x=\frac{4\pi}{3} + 4\pi \cdot k \\
+    x=-\frac{2\pi}{3} + 4\pi \cdot k &\; \lor \; x=\frac{4\pi}{3} + 4\pi \cdot k, \; k \in \{ -1, 0, 1\} \\
+    L= \{-\frac{8\pi}{3}, -\frac{2\pi}{3}, & \frac{4\pi}{3}, \frac{10\pi}{3} \}
 \end{align*}
 
-\section{Med hjelpemidler}
-
-\subsection{Oppgave 7: Bevis ved induksjon at $4+9+14+19+...+(5n-1)=\frac{n}{2}(5n+3)$}
-
-starten på beviser består av å sjekke om $P(1)$ stemmer
-
-$$P(1) : 4 = \frac{1}{2}(5+3) \rightarrow 4 = 4$$
-
-$P(1)$ stemmer
-
-Jeg antar at utsagnet er sant for alle naturlige tall $n = k \in \mathbb{N}$
-
-$4+9+14+19+...+(5k-1)=\frac{k}{2}(5k+3)$
-
-For å bevise dette må utsagnet $n = k + 1$ også være sant:
-
-\begin{align*}
-    4+9+14+19+...+(5k-1)+(5(k+1)-1) &= \frac{k+1}{2}(5(k+1)+3) \\
-    4+9+14+19+...+(5k-1)+(5(k+1)-1) &= \frac{k}{2}(5k+3) + (5(k+1)-1) \\
-    &= \frac{k+1}{2}(5(k+1)+3)
-\end{align*}
-
-$P(n)$ stemmer og er bevist med induksjon
-
-\textbf{Q.E.D}
-
-\subsection{Oppgave 8: Kontrapositivt bevis}
-
-Har ikke lært nokk til å gjøre denne oppgaven :(
-
-\subsection{Oppgave 9: Trekanttallene er tallfølgen gitt ved $T_n = [\frac{1}{2} n(n+1)]^{\infty}_{n=1}$}
-
-\subsubsection{Med utrykket for $T_n$ som utganspunkt, skriv et program som skriver ut summen av de 1, 2, 3, ... ,10 første trekanttallene}
-
-Det kan regnes ut med Python:
-
-\begin{verbatim}
-# definerer t(n)
-t = lambda n: 1/2 * n * (n+1)
-
-# altid et heltall
-def T(n) -> int:
-    s = []
-    for i in range(n+1):
-        s.append(t(i))
-    return sum(s)
-
-# printer summen fra 1 til 10
-for n in range(1, 11):
-    print(f"T({n}) : {T(n)}")
-\end{verbatim}
-
-Resultat av å kjøre koden:
-
-\begin{verbatim}
-T(1) : 1.0
-T(2) : 4.0
-T(3) : 10.0
-T(4) : 20.0
-T(5) : 35.0
-T(6) : 56.0
-T(7) : 84.0
-T(8) : 120.0
-T(9) : 165.0
-T(10) : 220.0
-\end{verbatim}
-
-\subsubsection{Hva er den tiende sentrerte femkanttallet $SF_{10}$}
-
-$SF_{10}$ kan regnes med programmet:
-
-\begin{verbatim}
-    n = 10
-    s = 1
-
-    for i in range(1, n+1):
-        s += 5*i -5
-
-    print(s)
-\end{verbatim}
-
-$SF_{10} = 226$
-
-\subsubsection{Hva er den eksplisitte formelen for $SF_n$}
-
-$SF_n$ kan defineres på lukket form:  $1 + \sum_{i=1}^{n} 5(i)-5$
-
-Dermed kan notasjonen konverteres til et eksplisitt uttrykk
-
-\begin{align*}
-    SF_n &= 1 +\sum_{i=1}^{n} 5(i)-5 \\ 
-    &=  1 +5 \sum_{i=1}^{n} i-1 \\ 
-    &=  1 +5 ( \sum_{i=1}^{n} i - \sum_{i=1}^{n} 1 ) \\
-    &=  1 +5 ( \frac{n(n+1)}{2} - {n} ) \\
-    &=  1 +5 ( \frac{n^2-n}{2} ) \\
-    &=  1 +\frac{5}{2} n^2- \frac{5}{2}n
-\end{align*}
-
-\subsection{Oppgave 10: For å komme i form til å løpe mila under arrangementet Midnight Sun Marathon, ønsker Atle å løpe stadig lengre distanser. Han tenker å løpe 2,6 km første gang, og derreter øke distansen med 0,2 km hver gang. Han setter som mål å ha løpt til sammen 260km før arrangementet}
-
-\subsubsection{Bruk en aritmetisk rekke til å finne ut hvor mange ganger Atle må løpe for å nå målet}
-
-Den totale distansen Atle har løpt kan skrives som : $\sum^n_{i=1} 2.6+(0.2(i-1))$
-
-For å finne hvor mange ganger Atle må løpe for å nå målet kan ligningen: $\sum^n_{i=1} 2.6+(0.2(i-1))=260$ løses med CAS
-
-$\sum^n_{i=1} 2.6+(0.2(i-1))=260 \rightarrow n = 40$
-
-Han må løpe 40 ganger for å nå målet
-
-\subsubsection{Argumenter for at hvis Atle når målet, er han i stand til å løpe mila under Midnight Sun Marathon}
-
-På Atle sin 40'ende og siste løpetur løper han 10,4km som er mer en det han skal løpe under Midnight Sun Marathon
-
-\subsection{Opgpave 11: Det viser seg at t år etter planting vokser en bestemt type eukalyptustre med en hastighet gitt ved $f(t)=0.2+\frac{2}{(t+2)^2}$}
-
-\subsubsection{Hvor mye vokser et eukalyptustre i løpet av det andre året etter det ble plantet?}
-
-Formelen for hastighet er gitt ved :  $f(t)=0.2+\frac{2}{(t+2)^3}$
-
-Dermed kan lengden planetn har vokst regnes ut med : $\int_{1}^{2}f(t)$ i CAS
-
-$\int_{1}^{2}0.2+\frac{2}{(t+2)^3}=0.249$
-
-\subsubsection{Hvor lang tid tar det fra et eukalyptustre blir plantet til det har vokst 2,25m}
-
-Legnden til treet kan defineres ved $\int f(t)$
-
-\begin{align*}
-    F(t) &= \int f(t) \\
-    &= \int 0.2+\frac{2}{(t+2)^3} \\
-    &= \frac{1}{5}t - \frac{2}{2(t+2)^2}
-\end{align*}
-
-For å finne tiden må vi løse, med å legge på $\frac{1}{4}$ : 
-
-\begin{align*}
-    \frac{1}{5}t - \frac{2}{2(t+2)^2} + \frac{1}{4} &= 2.25 \rightarrow t = 10.04
-\end{align*}
-
-Det vil ta 10.04 år før treet er 2.25 meter høyt
-
-\subsection{Oppgave 12: Funksjonen $f$ er gitt ved $f(x)=\sqrt{m-x}$, der $m$ er et positivt, reelt tall. Origo danner med skjæringspunktene mellom $f$ og koordinataksene en rettvinklet trekant}
-
-\subsubsection{Vis at hypotenusen i trekanten ligger på linja $y=-\frac{1}{\sqrt{m}}x + \sqrt{m}$}
-
-Hypotenusen kan skrives som en vektor fra $(0, \sqrt{m})$ til $(m, 0)$
-
-$\vec{h} = (m, -sqrt{m})$
-
-Dermed kan vi skrive om funksjonen til en linje
-
-\begin{align*}
-    y &= \frac{-\sqrt{m}}{m}x + \sqrt{m} \\
-    y &= -\frac{1}{\sqrt{m}}x + \sqrt{m}
-\end{align*}
-
-\subsubsection{Bruk CAS til å vise at forholdet mellom $V$ og $v$ er uavhengig av $m$}
+\subsubsection{Skiser grafen}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.7\textwidth]{oppgave12.png}
-    \caption{Bevist}
-    \label{fig:geogebra}
+    \includegraphics[width=0.7\textwidth, angle=90]{tegning.png}
+    \caption{Skisse av grafen}
 \end{figure}
+
+\subsection{Oppgave 6: Deriver funksjoneen}
+
+\subsubsection{$f(x)=x^3 \cdot \sin x$}
+
+\begin{align*}
+    f'(x) &= [x^3]' \cdot \sin x + x^3 \cdot [\sin x]' \\
+    &= 3x^2 \cdot \sin x + x^3 \cdot \cos x \\
+    &= x^2(3 \sin x - x \cos x)
+\end{align*}
+
+\subsubsection{$g(x)=\frac{1}{2} \cos(2x^2)$}
+
+\begin{align*}
+    g(x)'&=[\frac{1}{2} \cos(2x^2)]' \\
+    &=[\frac{1}{2}]'\cdot\cos(2x^2) + \frac{1}{2}\cdot[\cos(2x^2)] \\
+    &= \frac{1}{2} \cdot [\cos(2x^2)]' \\
+    &= \frac{1}{2} \cdot -\sin(2x^2) \cdot 4x \\
+    &= -2x\sin(2x^2)
+\end{align*}
+
+\subsection{Oppgave 7: Regn ut integralene}
+
+\subsubsection{$\int_{\frac{\pi}{3}}^{\pi}(\sin x + \cos x) \; dx$}
+
+\begin{align*}
+    \int_{\frac{\pi}{3}}^{\pi}(\sin x + \cos x) \; dx \\
+    &= [\sin x - \cos x]^\pi_\frac{\pi}{3} \\
+    &= \sin(\pi) - \cos(\pi) - (\sin(\frac{\pi}{3}) - \cos (\frac{\pi}{3})) \\
+    &= \sin(\pi)-\sin(\frac{\pi}{3})-\cos (\pi) - \cos (\frac{\pi}{3}) \\
+    &= 1 - \frac{\sqrt{3}}{2} + \frac{1}{2} \\
+    &= \frac{3-\sqrt{3}}{2}
+\end{align*}
+
+\subsubsection{$\int (x \cdot \sin 2x)dx$}
+
+Kom tilbake
+
+\section{Del 2: Med hjelpemidler}
+
+\subsection{Oppgave 8: Et fly har resit 26,0 km. Finn lengden nord}
+
+$\sin(41^{\circ} \cdot 26,0km) \approx 19.32 km$
+
+\text{Flyet har reist ca $19,32km$ nord}
+
+\subsection{Oppgave 9: Finn høyden av tårnet}
+
+\text{Høyden av tårned kan finnes ved å definere to funksjoner for hver av vinkelene og finne kjæringspunktet}
+
+\begin{align*}
+    f(x) &= x\tan(16.7^\circ) \; g(x)=(x-85.3)\tan(21.4^\circ) \\
+    \text{Løser:} \\
+    f(x) &= h(x) \\
+    x &\approx 363.82 \\
+    h \approx f(363.82) \approx 109.15 
+\end{align*}
+
+\text{Høyden til tårnet er ca $109.15m$}
+
+\subsection{Oppgave 10: }
+
+\subsubsection{Bruk formelene for sinus og cosinus til en differanse mellom to vinkler til å vise at $\tan(u-v)=\frac{\tan u-\tan v}{1+\tan u \tan v$}
+
+
+
+\subsubsection{Skriv $\sin 3x$ utrykt ved $\sin x$}
+
+\subsection{Opgpave 11: }
+
+\subsection{Oppgave 12:}  
+
+\subsubsection{Lag en modell $f(x)$ for befolknings årlige vekstfart}
+
+\text{Modellen etter regersjonsanalyse som polynomfunksjon er:}
+
+$$g(x)=287.87x^2-4380.35x + 30391.35$$
+
+\subsubsection{Hvor mange innbyggere var det i Norge $1.1.1976$ ifølge modellen?}
+
+\text{Først defineres en funksjon for befolkningsvekst ved å løse differensialigningen:}
+
+$$y' = g(x)$$
+
+\text{Dette gir at befolkningsveksten $f(x)=95.96x^3-2190.17x^2+30391.35x+3917773$}
+
+$$f(4)\approx4010437$$
+
+\subsubsection{Hvilket år passerte folketallet 4,2 millioner ifølge modellen?}
+
+$f(x)=0 \rightarrow x=14.84$
+
+\text{Ifølge funksjonen passerer folketallet $4,2$ 14.84 år etter 1972}
+
+\subsection{Oppgave 13: En fabrikk sliper ved uhel}
+
+
 
 \bibliographystyle{alpha}
 \bibliography{sample}
