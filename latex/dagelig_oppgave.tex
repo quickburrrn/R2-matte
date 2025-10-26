@@ -1,0 +1,58 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{inconsolata}
+\usepackage{minted}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Dagelige oppgaver}
+\author{Skrevet av André Hansen}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Dagelig oppgaver for å meste ulike oppgaver
+\end{abstract}
+
+\section{05.10.2025}
+
+Avansert derivasjon og sammensatte funksjoner
+
+La $f(x)=x^x, g(x)=ln(\sin x) for x\in(0,\pi)$
+
+\subsection{Vis at $f'(x)=x^x(1+\ln x)$}
+
+\begin{align*}
+    y &= x^x \\
+    \ln y &= x\ln x \\
+    \frac{1}{y} y' &= \ln x + 1 \\
+    y' &= y(\ln x + 1) \\
+    y'&= x^x(\ln x + 1)
+\end{align*}
+
+Hjelpemidler: ChagGPT for å lære at $\ln y$ derivert på hensyn på $x$ er $\frac{1}{y}y'$
+
+\subsection{Finn $\frac{d}{dx}[g(\sqrt{x})]$}
+
+\begin{align*}
+    g(\sqrt{x})' &= \ln(\sin(\sqrt{x}))' \\
+    &= \frac{\cos(\sqrt{x})}{2 \sqrt{x} \sin(\sqrt{x})}
+\end{align*}
+
+\subsection{Løs $h'(x)=h(x)\ln x$ med $h(1)=e$}
+
+$h(x)=e^{2-x}x^x x>0$
+
+\end{document}
