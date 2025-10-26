@@ -49,3 +49,5 @@ Dette er oppgaver som jeg har slitt med:
 ### Oppgaver utenom boka:
 
 : Finn summen av : $1+\frac{1}{4}+\frac{1}{9}+\frac{1}{16}+...+\frac{1}{n^2}+...$
+
+Hvordan omskrive 3d og 2d funksjon fra og til vektor paramterfrestilling funksjon.

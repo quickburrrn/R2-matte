@@ -1,0 +1,57 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{inconsolata}
+\usepackage{minted}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Syke formeler}
+\author{Skrevet av André Hansen}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Dette er et dokument med syke formeler og bevis jeg finner underveis
+\end{abstract}
+
+\section{Avstander}
+
+\subsection{Avstand mellom punkt og plan}
+
+$\alpha$ er planet gitt ved $ax+by+cz+d+0$
+
+$\vec{n}$ er normalvektor til planet $\alpha$
+
+$P(x_1,y_1,z_1)$ er punktet vi skal finne avstand til
+
+$Q(x_0, y_0, z_0)$ er punkt på $\alpha$ nærmest $P$
+
+\begin{align*}
+    |\vec{PQ}|=\frac{|ax_1+by_1+cz_1+d|}{\sqrt{a^2+b^2+c^2}} \\
+    \text{eller vektorbasert} \\
+    |\vec{QP}|=\pm=\frac{\vec{n}\cdot\vec{QP}}{|\vec{n}|}=\frac{|\vec{n}\cdot\vec{QP}|}{|\vec{n}|} \\
+\end{align*}
+
+\text{Formelen baserer seg på at vinkelen mellom de er enten 0 eller 180}
+
+\text{Dermed er altid cos -1 eller 1 når man regner prikkproduktet}
+
+\text{siden $Q$ er på planet $\alpha$ kan det skrives som:}
+
+$ax_0+by_0+cz_0+d=0 \Leftrightarrow d=-ax_0-by_0-cz_0$
+
+\bibliographystyle{alpha}
+
+\end{document}
