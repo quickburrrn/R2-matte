@@ -25,12 +25,13 @@ Eksamensfobreding til R2 matteksamen
 
 ## Oppgaver å komme tilbake til
 
-1.3
-1.8
-1.16
-1.19
-1.65
-1.69
+- 1.3
+- 1.8
+- 1.16
+- 1.19
+- 1.65
+- 1.69
+- 5.27( uten hjelpemidler)
 
 ## Vanskelige oppgaver (Hvis du kan disse uten hjelp kan du mye)
 
