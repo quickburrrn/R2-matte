@@ -1,0 +1,182 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{inconsolata}
+\usepackage{minted}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Prøve 1 eksamen}
+\author{Skrevet av André Hansen}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Dette er prøve nummer 1
+\end{abstract}
+
+\section{Del 2: Med hjelpemidler}
+
+\subsection{Oppgave 1}
+
+\subsubsection{a)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/opg1.a.1.png}
+    \caption{Utregning i cas}
+\end{figure}
+
+Jeg henter den deriverte i punktet 0.
+
+Farten er ca $31.21 m/s$
+
+\subsubsection{b)}
+
+Hvordan kan denne løses dersom vi ikke vet hvor målet er?
+
+\subsubsection{c)}
+
+På det høyeste er ballen ca $1.36$ meter over bakken og har en fart på ca $30.58 m/s$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/opg1.b.1.png}
+    \caption{Utregning i cas}
+\end{figure}
+
+\subsection{Oppgave 2)}
+
+Først utfører jeg en regresjonsanalyse med en enhets oppløsning.
+
+Som regresjonsmodell valgte jeg en sjettegrads polynomfunksjon
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/opg2.1.png}
+    \caption{Regresjonsanalyse i Geogebra}
+\end{figure}
+
+Derreter regner jeg volumet for omdreingslegemet i cas, ved bruke funksjonen fra analysen.
+
+Volumet til pæren er ca $310.72 cm$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/opg2.2.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+\subsection{Oppgave 3)}
+
+\subsubsection{a)}
+
+De ulike veridene i modellen $T(x)$ passer veldig bra med opplysningene gitt ovenfor
+
+Ettersom solnedgang varierer i løpet av året refelekterer modellen godt solnedgang i året
+
+\subsubsection{b)}
+
+Tidspunktet på når lyset slår seg på flytter seg med 3 minutter er $46$ og $135$ dager etter nyttår.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/opg3.b.1.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+\subsubsection{c)}
+
+Tidspunktet endrer seg raskest for hver $90.9$'ende og $273$'ende dag.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/opg3.c.1.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+Da ender den seg med $4$ minutter og $9$ sekunder.
+
+\subsection{Oppgave 4)}
+
+\subsubsection{a)}
+
+Den rekursive sammenhengen for summen av kubikktallene er :
+
+$$S_{n+1} = S_n + (n+1)^3$$
+
+Vet ikke hvordan man finne eksplissit til sum med polynomfunksjon
+
+\subsubsection{b)}
+
+\begin{verbatim}
+S = 0
+
+for n in range(1, 51):
+    S += n**3
+
+print(f"Summen er:", S)
+\end{verbatim}
+
+\subsubsection{c)}
+
+Vet ikke hvordan man finne eksplissit til sum med polynomfunksjon
+
+\subsection{Oppgave 5)}
+
+Vi kan finne avstanden ved : $Avstand fra sentrum til planet - radius$
+
+$r = \frac{|B-A|}{2}=2.45$
+
+$\gamma : x + 2y + 2z = 14$
+
+Sentrum
+$S = A + \frac{B-A}{2} = (3, 0, -3)$
+
+Definerer et punkt som er det nærmeste punktet $S$ på $\gamma$
+
+Dermed kan vi finne avstanden fra sirkelen til planet ved
+
+\begin{align*}
+    |\vec{SQ}| &= \frac{|1 \cdot 3 + 2 \cdot 0 + 2 \cdot -3 -14|}{\sqrt{1^2 + 2^2 + 2^2}} - r \\ 
+    &= -sqrt{6} + 17 / 3 \\
+    \approx 3.22
+\end{align*}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/opg5.a.1.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+\subsubsection{b)}
+
+$\alpha = \gamma$
+
+Denne er parallel med $\gamma$ og har samme avstand.
+
+\subsection{6)}
+
+Det er ikke mulig siden resultatet blir : $e^x \cdot a_1$ som aldri kan bli $0$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/opg6.1.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+\bibliographystyle{alpha}
+\bibliography{sample}
+
+\end{document}
