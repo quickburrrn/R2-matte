@@ -12,9 +12,9 @@ Eksamensfobreding til R2 matteksamen
 
 ### Plan:
 
-- [ ] Geogerbra templates
-- [ ] Cheat Sheets
-- [ ] Prøveksamener i latex
+- [x] Geogerbra templates
+- [x] Cheat Sheets
+- [x] Prøveksamener i latex
 - [ ] Lokal ai egnet for r2
 - [ ] revers enginered stikkprøve
 

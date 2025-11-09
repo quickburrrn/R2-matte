@@ -52,6 +52,41 @@ $Q(x_0, y_0, z_0)$ er punkt på $\alpha$ nærmest $P$
 
 $ax_0+by_0+cz_0+d=0 \Leftrightarrow d=-ax_0-by_0-cz_0$
 
+\section{Rekker}
+
+\subsection{Sum av kvadrater}
+
+$$\sum_{k=1}^{n} k^2 = \frac{n(n+1)(2n + 1)}{6}$$
+
+\subsection{Sum av kuber}
+
+\begin{align*}
+    \sum_{k=1}^{n} k &= \frac{n(n+1)}{2} \\
+    \sum_{k=1}^{n} k^3 &= (\frac{n(n+1)}{2})^2
+\end{align*}
+
+\section{Integrasjon}
+
+\subsection{Rektangelmetoden}
+
+Rektangelmetoden med venstretilnærming
+
+$$\int_{a}^{b} f(x) dx \approx \sum_{i=1}^{n} f(x_{i - 1}) \cdot \Delta x \text{ der } x_{i-1} = a + (i-1) \cdot \Delta x \text{ og } \Delta x = \frac{b - a}{n}$$
+
+Rektangelmetoden med høyretilnærming
+
+$$\int_{a}^{b} f(x) dx \approx \sum_{i=1}^{n} f(x_i) \cdot \Delta x \text{ der } x_i = a + i \cdot \Delta x$$
+
+Rektangelmetoden med midtpunkttilnærming
+
+$$\int_{a}^{b} f(x) dx \approx \sum_{i = 1}^{n} f(m_i) \cdot \Delta x , \text{ der } m_i = a + (i - \frac{1}{2}) \cdot \Delta x$$
+
+\subsection{Trapesmetoden}
+
+$$\int_{a}^{b} f(x) dx \approx \frac{\Delta x}{2} \left (f(a) + f(b) + 2 \cdot \sum_{i=1}^{n-1}f(x_i) \right ) \text{ der } x_i = a + i \cdot \Delta x$$
+
+
+
 \bibliographystyle{alpha}
 
 \end{document}
