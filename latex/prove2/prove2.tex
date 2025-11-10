@@ -1,0 +1,191 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{inconsolata}
+\usepackage{minted}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{R2 Eksamen}
+\author{Skrevet av André Hansen}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Dette er en template til selve eksamen
+\end{abstract}
+
+\section{Oppgave 1}
+
+\subsection{a)}
+
+Først modelerer jeg ballen i Geogebra
+
+Høyden kan jeg finne ved å se se $z$ aksen av $\vec{r}(0)$
+
+Og posisjonen etter $0.5$ kan jeg finne ved å løse $\vec{r}(0.5)$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave1.a.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+Høyden over kanten er $6m$
+
+Posisjonen etter $0.5s$ er $(1, 2, 4.46)$
+
+\subsection{b)}
+
+For å finne farten når ballen treffer bakken må jeg finne lengen av den deriverte sekundet z posisjonen er 0
+
+Jeg kan finne sekundet ballen treffer bakken ved å løse ligningen $z(\vec{r}(t))=0, \quad t > 0$
+
+Derreter kan jeg finne farten å bruke løsiningen $l$ ved : $|\vec{r}'(l)|$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave1.b.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+Farten til ballen når den trefer bakken er ca$10.22m/s$
+
+\subsection{c)}
+
+For å finne sekundet farten er $10m/s$ kan vi gjøre det ved å sette lengden til den deriverte lik $10m/s$:
+
+$|r'(t)|=10$
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave1.c.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+Etter ca $8.4 s$ er farten til ballen $10m/s$
+
+\section{Oppgave 2}
+
+\subsection{a)}
+
+Påstanden om at 3 punkter i et plan kan bestemme likningen til planet stemmer.
+
+Dette stemmer fordi at normalvektoren til et plan står altid vinkerett på alle vektorer i planet.
+
+Dermed vil kryssproduktet av to vektorer som dannes av tre punkter i planet danne en normalvektor til planet.
+
+Videre vet vi også et punkt i planet.
+
+Med normalvektor og et punkt i planet definert har vi alle komponententer for likningen til planet.
+
+\subsection{b)}
+
+Vi har: $S(x)=1+(ln x - 1) + (ln x - 1)^2 + ...$
+
+Den kan skrives om slik : $S(x)=\sum_{i=0}^{\infty} (ln x - 1)^i$
+
+Vi kan bruke det vi vet om summen av en uendelig geometrisk rekke for å skrive rekken om til en eksplisitt formel
+
+\begin{align}
+    a \sum_{i=0}^{\infty} r^i &= a \frac{1}{1-r}, \quad |r| < 1 \\
+    S(x) &= \sum_{i=0}^{\infty} (ln x - 1)^i = \frac{1}{1-ln x - 1} = \frac{1}{ln x} 
+    \text{setter in $\frac{1}{e}$ for å teste}
+    \frac{1}{ln \frac{1}{e}} = -1
+\end{align}
+
+Dermed stemmer påstanden ikke
+
+\subsection{c)}
+
+Vi kan teste påstanden med å sammenligne integralene
+
+\begin{align*}
+    \int f(x) \equiv \int g(x), \quad a \in \mathbb{R}, a > -1 \\
+\end{align*}
+
+For å teste påstanden, testet jeg med $a=1$
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave2.c.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+Dermed stemmer påstanden ikke
+
+\section{Oppgave 3}
+
+Jeg løser denne oppgaven med regresjonsanalyse.
+
+Etter å ha modulert en halv sideflate kan jeg regne volumet å fine volumet til omdreingslegemet>
+
+$$V=\pi \int_{0}^{3.87} f(x)^2$$
+
+Hvor $f$ er funksjon for jorbæret og $3.87$ er bunkunktet
+
+Antar at enhetene er cm.
+
+jorbæret har en volum på ca $171.17 cm^3$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave3.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+\section{Oppgave 4}
+
+\subsection{a)}
+
+Vi har funksjonen for fart gitt ved $v(t)=-6 \sin(360t - \frac{\pi}{2}) + 54$
+
+Dermed kan vi finne gjennomsnittsfargen for et tidspunkt med (v(0)-v(x))/2
+
+\subsection{b)}
+
+Vi kan finne ut av når bilen har størst akselerasjon ved å løse den deriverte av akselerasjonen lik 0 og sjekke for konkavitet
+ 
+$v''(t)=0$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave4.b.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+Den største akselerasjonen er på $  1036 m/s^2$
+
+\subsection{c)}
+
+Vi man finne hvor lang tid det tar før de har kjørt $2km$ å sjekke når distande er lik 2. Vi kan finne distanse ved å integrere farten
+
+Formelen blir da $\int v(t)dt=2$ Hvor $C=0$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave4.c.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+Det tar de ca $2.2 min$ å kjøre $2.0 km$
+
+\section{Oppgave 5}
+
+\section{Oppgave 6}
+
+\bibliographystyle{alpha}
+\bibliography{sample}
+
+\end{document}
