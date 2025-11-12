@@ -1,0 +1,132 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{inconsolata}
+\usepackage{minted}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{R2 Prøve 3}
+\author{Skrevet av André Hansen}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Dette er en template til selve eksamen
+\end{abstract}
+
+\section{Oppgave 1}
+
+\subsection{a)}
+
+Jeg fant høyden til bilen ved å se på z kordinaten til bilen etter 5 sekunder
+
+$$Høyde = z(r(5)) = \frac{20}{3}$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave1a1.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+\subsection{b)}
+
+Fartsverkoren kan finnes ved å definere en funksjon for fart $v(t)=r'(t)$, derreter se vektoren etter $10s$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave1b1.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+\subsection{}{c)}
+
+For å finne høyden til hver etasje antar jeg at det en utkjørsel for biler per periode. Jeg antar også at enhetene er gitt i meter.
+
+Dermed finner jeg en mulig avstand mellom etasjene med å regne avstanden mellom z aksene på kurven
+
+\section{Oppgave 2}
+
+\subsection{a)}
+
+For å finne ut av hvor mye Nora må sette inn årlig løser vi en sum likning med $n=29$ fordi det er totalt 29 år med sparing
+
+$$a \cdot \sum_{i=1}^{29} 0.025^i=3750000$$
+
+\subsection{b)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave2b1.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+\section{Oppgave 3}
+
+\subsection{a)}
+
+Tiden det tar før akselerasjonen til haren er null er ca 1 sekund.
+
+Jeg fand dette svaret ved å definere en funksjon for akselerasjon $a(t)=v'(t)$
+
+og løse likningen $a(t)=0$
+
+Dette forteller oss hvor lang tid haren går fra stillestående til dens toppfart.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave3a1.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+\subsection{b)}
+
+Haren løper ca 103 meter.
+
+Jeg fant dette ved å regne ut
+
+$$\int_{0}^{7} v(t)$$
+
+I CAS
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave3b1.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+\subsection{c)}
+
+For å finne gjennomsnitsfarten de første 200 meterene løste jeg først:
+
+$$\int_{0}^{x} v(x) = 200 dx$$
+
+gjennomsnitsfarten de første 200 meterne
+
+Derreter regner jeg ut
+
+$$\int_{1}^{tid} v(t) dt$$
+
+Gjennomsnitsfarten er ca $13.4$ meter
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave3c1.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+\bibliographystyle{alpha}
+\bibliography{sample}
+
+\end{document}
