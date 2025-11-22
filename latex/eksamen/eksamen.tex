@@ -1,0 +1,219 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{inconsolata}
+\usepackage{minted}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{R2 Eksamen Høst 2025}
+
+\begin{document}
+\maketitle
+
+\section{Oppgave 1}
+
+\subsection{a)}
+
+Jeg løser denne oppgaven ved å derivere funksjonen for posisjon:
+
+$$|\vec{r}(2)'| = \text{fart etter 2 sekunder}$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave1.a.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+Farten til ubåten etter 2 sekunder er ca $10.3 m/s$
+
+\subsection{b)}
+
+Jeg løser denne oppgaven ved å finne et globalt minimum for $t\in[0, 60]$
+
+Dette gjør jeg ved å finne nullpunktene til z-aksen til den deriverte.
+
+$$Z(\vec{r}(2)') = 0$$
+
+Dette gir meg tiden ubåten er på dypeste.
+
+Derreter setter jeg tiden på det dypeste i posisjonsformelen og ser på z-aksen
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave1.b.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+Ubåten befinner seg $312.5 m$ under havet på det dypeste.
+
+\subsection{c)}
+
+Kan kan finne ut om fiskestimen kolliderer med ubåten ved å se på avstanden mellom ubåten og fiskestimen på det nærmeste.
+
+Jeg velger å lage en model for avstanden mellom ubåten og fistesteamen, jeg kaller denne for $d$ for distance
+
+$\vec{d}(t)=|\vec{r}(t)-\vec{s}(t)|$
+
+Dersom jeg deriverer denne funksjonen kan jeg se hvordan avstand endrer seg over tid.
+
+Dette betyr at detsom jeg løser likningen:
+
+$\vec{d}(t)'=0$
+
+Kan jeg finne tidspunktet for den nærmeste avstanden.
+
+Derreter setter jeg resultate fra likningen i funksjonen for avstand.
+
+Til slutt sammenligner jeg avstanden med størrelsene til ubåten og fiskestimen.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave1.c.1.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+Dermed er vi at den minste avstanden mellom fiskestimen og ubåten er ca $40m$
+
+Fiskestimen og ubåten ikke store nokk for at de skal kolidere.
+
+\section{Oppgave 2)}
+
+\subsection{a)}
+
+For å løse denne oppgaven utførere jeg regresjonsanalyse i Geogebra og velger en egnet modell.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave2.a.1.png}
+    \caption{Legger til datapunkt i Geogebra}
+\end{figure}
+
+Jeg valgte $\sin$, det ga best tilnærming fordi punktene danner en harmoniske svigninger.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave2.a.2.png}
+    \caption{regresjonsanalyse}
+\end{figure}
+
+Deremd la jeg modellen i grafikkfeltet.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave2.a.3.png}
+    \caption{Moddel for tid(x) og volt(y)}
+\end{figure}
+
+\subsection{b)}
+
+Jeg kan finne tidspunktene spenningen er $230 V$ ifølge modellen ved å løse likningen:
+
+$$U(t)=230, \quad t\in(0, 0.02)$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave2.b.1.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+Dermed ser vi at modellen sier at spenningen er på $230 V$ etter ca $0.00254s$ og $0.00746s$
+
+\subsection{c)}
+
+Jeg starter med å finne $T$
+
+$$T=P=\frac{2\pi}{c}=\frac{2\pi}{314}$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave2.c.1.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+Målingene er veldig nære men ikke mattematisk riktig. Truls ville nok ha avrundet opp til $230V$, men dette kommer ann på hvor mye nøyaktighet an aksepterer.
+
+\section{Opgpave 3}
+
+\subsection{a)}
+
+Jeg kan løse denne oppgaven med å definere $CCL_4$ i kroppen som en funksjon av dager:
+
+$$CCL_4=f(x)=2 \cdot \sum_{i=0}^{x} (0.82)^i=2 \cdot \frac{0.82^x-1}{0.82 - 1}$$
+
+Dermed kan jeg løse likningen : 
+
+$$f(x)=10$$
+
+for å finne ut av hvor mange netter Sofie må sove på soverommet før konsentrasjonen av $CCI_4$ beggyner å bli farlig.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave3.a.1.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+\subsection{b)}
+
+For å løse denne oppgaven definrer jeg en funksjon for summen av en konvergerende uendelig rekke:
+
+$$f(x)=2 \cdot \lim_{n \rightarrow \infty} \sum_{i=0}^{n} (x)^i = \frac{2}{1-x}, \quad |x|< 1$$
+
+Dermed kan jeg løse likningen:
+
+$$f(x)=10$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave3.b.1.png}
+    \caption{Utregning i CAS}
+\end{figure}
+
+Her ser vi at artikelen antar at en voksen person skiller ut 20 prosent $CCI_4$ hver dag
+
+\section{Opgpave 4}
+
+\subsection{a)}
+
+Grunnen til at den ene metoden vil gi litt for høy verdi og den andre metoden litt for lav verdi er på grun av hvordan høyre og vesnte tilnærming fungerer.
+
+Høyresum vil altid starte rektangelene på høyreside dermed blir summen høyre
+
+Vensteside vil altid starte på venste dermed komme litt under grafen, som betyr at summen blir litt lavere.
+
+Her en en illusrtasjon på hvordan tilnærmingene fungerer:
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave4.a.2.png}
+    \caption{Her ser du hvordan rekgangelsummene er unøyaktige}
+\end{figure}
+
+\subsection{b)}
+
+Jeg valgte å skrive om funksjonen til en funksjon som regner med midtpunkttilnærming:
+
+$$\int_{a}^{b} f(x) dx \approx \sum_{i = 1}^{n} f(m_i) \cdot \Delta x , \text{ der } m_i = a + (i - \frac{1}{2}) \cdot \Delta x$$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{bilder/oppgave4.b.1.png}
+    \caption{Resutlatet av å kjøre koden}
+\end{figure}
+
+Integralet blir ca $36.4$ ved midtpunkttilnærming med 100 rektangler
+
+\bibliographystyle{alpha}
+\bibliography{sample}
+
+\end{document}
